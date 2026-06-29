@@ -33,11 +33,8 @@ export default function Home() {
       <Reviews />
       <FAQ />
       <Contact />
-      <ServiceAreas />
-
-<GoogleMap />
-
-<Footer />
+      <GoogleMap />
+      <Footer />
     </div>
   );
 }
