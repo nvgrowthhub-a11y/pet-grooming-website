@@ -9,7 +9,10 @@ const visionSections = [
     title: 'Pamper Your Pet in the Comfort of Home',
     image: '/images/breed-german-shepherd.png',
     description:
-      'At TOES N TAILS, we bring professional pet grooming directly to your doorstep. Our experienced groomers provide a calm, safe and hygienic grooming experience, ensuring your furry companion feels relaxed in their own familiar surroundings.',
+      'Welcome to TOES N TAILS, your premier choice for professional at-home pet grooming services. 
+      We bring the salon experience directly to your doorstep, serving all of Delhi and NCR with experienced,
+  compassionate groomers. Our mission is to provide stress-free grooming that leaves your pets happier, healthier, 
+  and looking their best, all within the familiar comfort of their own environment.',
 
     bullets: [
       'Professional & Certified Groomers',
@@ -26,7 +29,12 @@ const visionSections = [
     image: '/images/breed-labrador.png',
 
     description:
-      'Doorstep grooming offers convenience while reducing stress and anxiety for your pets. Your furry friend receives one-on-one attention without travelling to a grooming salon.',
+      'Reduced Stress
+        Pets are 30% calmer in their familiar surroundings, avoiding the anxiety of travel and new environments.
+Convenience,
+        No travel time, no exposure to other animals, and flexible scheduling 7 days a week to fit your busy life.
+Personalized Care,
+          One-on-one attention ensures customized services, leading to a 45% increase in hygiene compliance.',
 
     bullets: [
       'No travelling required',
@@ -44,7 +52,12 @@ const visionSections = [
     image: '/images/breed-golden-retriever.png',
 
     description:
-      'We provide complete grooming solutions designed to keep your pet healthy, clean and beautiful.',
+      'Bath and Brush 
+        Hair cuts & Styling 
+       Nail trims 
+         Teeth Cleaning
+           DeSheeding Treatments 
+             Flea & Tick Treatments',
 
     services: [
       'Luxury Bath',
@@ -64,7 +77,16 @@ const visionSections = [
     image: '/images/breed-pug.png',
 
     description:
-      'Every grooming session follows a professional process that keeps your pet comfortable from beginning to end.',
+      'Easy Bookings on Call
+Schedule your convenient at-home grooming appointment in minutes.
+	Groomer Arrival
+Our supportive and friendly professional arrives at your home, fully equipped
+	Customized Grooming
+Services are carefully tailored to your pet's specific needs and your preferences.
+	Clean & Tidy
+We ensure your home is left spotless and clean after grooming.
+	Satisfaction Guaranteed
+We strive for excellence, making sure both you and your beloved pet are completely happy.',
 
     process: [
       'Book Appointment',
@@ -81,7 +103,12 @@ const visionSections = [
     image: '/images/breed-german-shepherd.png',
 
     description:
-      'Give your furry friend the luxury grooming experience they deserve. Book an appointment today and let TOES N TAILS bring the spa directly to your home.',
+      'Explore our full range of services and book your appointment online at
+TOES N TAILS.
+Call Us Directly
+Speak with our friendly team and schedule your pet's pampering session by calling 8800971337.
+Give your pet the gift of a professional grooming experience without ever leaving your home. TOES N TAILS is committed to providing convenient, high-quality care that prioritizes your pet's comfort and well-being.
+Contact us today and let us bring the ultimate grooming experience',
 
     cta:
       'Professional • Safe • Hygienic • Doorstep Grooming'
