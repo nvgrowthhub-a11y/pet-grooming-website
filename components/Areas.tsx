@@ -1,12 +1,14 @@
 'use client';
 
+import Image from 'next/image';
+
 const areas = [
-  { name: 'Gurgaon', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20%20-pLP8RamldBwexe9RLco43gSCsPGN8c.jpeg' },
-  { name: 'South Delhi', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20%20-pLP8RamldBwexe9RLco43gSCsPGN8c.jpeg' },
-  { name: 'Noida', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20%20-pLP8RamldBwexe9RLco43gSCsPGN8c.jpeg' },
-  { name: 'Greater Noida', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20%20-pLP8RamldBwexe9RLco43gSCsPGN8c.jpeg' },
-  { name: 'Ghaziabad', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20%20-pLP8RamldBwexe9RLco43gSCsPGN8c.jpeg' },
-  { name: 'Faridabad', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20%20-pLP8RamldBwexe9RLco43gSCsPGN8c.jpeg' },
+  { name: 'Gurgaon', image: '/images/location-gurgaon.png' },
+  { name: 'South Delhi', image: '/images/location-south-delhi.png' },
+  { name: 'Faridabad', image: '/images/location-faridabad.png' },
+  { name: 'Noida', image: '/images/location-gurgaon.png' },
+  { name: 'Greater Noida', image: '/images/location-faridabad.png' },
+  { name: 'Ghaziabad', image: '/images/location-south-delhi.png' },
 ];
 
 export default function Areas() {
@@ -22,10 +24,19 @@ export default function Areas() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {areas.map((area, idx) => (
-            <div key={idx} className="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer group">
-              <div className="relative w-full h-48 bg-gray-300">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 group-hover:from-black/80 transition">
-                  <span className="text-white font-bold text-lg">📍 {area.name}</span>
+            <div key={idx} className="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 cursor-pointer group">
+              <div className="relative w-full h-56 bg-gray-300">
+                <Image
+                  src={area.image}
+                  alt={area.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6 group-hover:from-black/80 transition">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">📍</span>
+                    <span className="text-white font-bold text-xl">{area.name}</span>
+                  </div>
                 </div>
               </div>
             </div>

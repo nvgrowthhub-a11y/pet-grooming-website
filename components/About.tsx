@@ -4,10 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 const dogBreeds = [
-  { name: 'German Shepherd', image: '/images/german-shepherd.png' },
-  { name: 'Labrador', image: '/images/labrador.png' },
-  { name: 'Golden Retriever', image: '/images/golden-retriever.png' },
-  { name: 'Pug', image: '/images/pug.png' },
+  { name: 'German Shepherd', image: '/images/breed-german-shepherd.png' },
+  { name: 'Labrador', image: '/images/breed-labrador.png' },
+  { name: 'Golden Retriever', image: '/images/breed-golden-retriever.png' },
+  { name: 'Pug', image: '/images/breed-pug.png' },
 ];
 
 export default function About() {
