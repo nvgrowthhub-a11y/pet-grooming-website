@@ -17,11 +17,6 @@ const reasons = [
     icon: '⚡'
   },
   {
-    title: 'Modern Equipment',
-    description: 'State-of-the-art grooming tools and equipment for the best results.',
-    icon: '🔧'
-  },
-  {
     title: 'Premium Experience',
     description: 'White-glove service from the moment you arrive until you leave with your pampered pet.',
     icon: '👑'
