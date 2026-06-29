@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">TOES N TAILS</h3>
             <p className="text-gray-400 mb-4">
-              Where luxury meets exceptional pet care. Providing premium grooming services for your beloved companions since 2009.
+              Where luxury meets exceptional pet care. Providing premium grooming services for your beloved companions since 2026.
             </p>
             <div className="flex gap-3">
 <a
