@@ -9,7 +9,7 @@ const visionSections = [
     title: 'Pamper Your Pet in the Comfort of Home',
     image: '/images/breed-german-shepherd.png',
     description:
-      'Welcome to Prashant's Pet Grooming, your premier choice for professional at-home pet grooming services. 
+      'Welcome to TOES N TAILS , your premier choice for professional at-home pet grooming services. 
 	We bring the salon experience directly to your doorstep, serving all of Delhi and NCR with experienced, compassionate groomers. 
 	Our mission is to provide stress-free grooming that leaves your pets happier, healthier, and looking their best, all within the familiar comfort of their own environment.',
 
