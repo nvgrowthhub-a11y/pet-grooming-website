@@ -8,11 +8,11 @@ const visionSections = [
     id: 1,
     title: 'Pamper Your Pet in the Comfort of Home',
     image: '/images/breed-german-shepherd.png',
-    description:
-      'Welcome to TOES N TAILS , your premier choice for professional at-home pet grooming services. 
-	We bring the salon experience directly to your doorstep, serving all of Delhi and NCR with experienced, compassionate groomers. 
-	Our mission is to provide stress-free grooming that leaves your pets happier, healthier, and looking their best, all within the familiar comfort of their own environment.',
+    description: `Welcome to TOES N TAILS, your premier choice for professional at-home pet grooming services.
 
+We bring the salon experience directly to your doorstep, serving all of Delhi and NCR with experienced, compassionate groomers.
+
+Our mission is to provide stress-free grooming that leaves your pets happier, healthier, and looking their best, all within the familiar comfort of their own environment.`,
     bullets: [
       'Professional & Certified Groomers',
       'Doorstep Pet Grooming',
@@ -178,3 +178,70 @@ priority={index===0}
 {item.description}
 
 </p>
+<div className="space-y-3">
+
+{item.bullets?.map((bullet, i) => (
+
+<p key={i} className="flex gap-2 text-gray-700">
+
+<span className="text-pink-600">✔</span>
+
+{bullet}
+
+</p>
+
+))}
+
+{item.services?.map((service, i) => (
+
+<p key={i} className="flex gap-2 text-gray-700">
+
+<span className="text-pink-600">🐾</span>
+
+{service}
+
+</p>
+
+))}
+
+{item.process?.map((step, i) => (
+
+<p key={i} className="flex gap-2 text-gray-700">
+
+<span className="text-pink-600">{i + 1}.</span>
+
+{step}
+
+</p>
+
+))}
+
+{item.cta && (
+
+<div className="mt-8 rounded-xl bg-pink-600 text-white p-6">
+
+<p>{item.cta}</p>
+
+</div>
+
+)}
+
+</div>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+
+)}
+
+</div>
+
+</section>
+
+);
+
+}
