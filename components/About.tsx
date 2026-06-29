@@ -78,7 +78,7 @@ Our mission is to provide stress-free grooming that leaves your pets happier, he
   {
     id: 5,
     title: 'Book Your At-Home Grooming Today!',
-    image: '/images/breed-german-shepherd.png',
+    image: '/images/Shih-Tzu-Dog.jpg',
 
     description:
       'Give your furry friend the luxury grooming experience they deserve. Book an appointment today and let TOES N TAILS bring the spa directly to your home.',
