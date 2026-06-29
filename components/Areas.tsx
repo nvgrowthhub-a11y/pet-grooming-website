@@ -3,30 +3,12 @@
 import Image from 'next/image';
 
 const areas = [
-  {
-    name: 'Gurgaon',
-    image: '/images/cyber-hub-gurgaon.jpg',
-  },
-  {
-    name: 'South Delhi',
-    image: '/images/india-gate-south-delhi.jpg',
-  },
-  {
-    name: 'Faridabad',
-    image: '/images/surajkund-faridabad.jpg',
-  },
-  {
-    name: 'Noida',
-    image: '/images/okhla-bird-sanctuary-noida.jpg',
-  },
-  {
-    name: 'Greater Noida',
-    image: '/images/india-expo-mart-greater-noida.jpg',
-  },
-  {
-    name: 'Ghaziabad',
-    image: '/images/iskcon-ghaziabad.jpg',
-  },
+  { name: "Gurgaon", image: "/images/location-gurgaon.jpg" },
+  { name: "South Delhi", image: "/images/location-south-delhi.jpg" },
+  { name: "Faridabad", image: "/images/location-faridabad.jpg" },
+  { name: "Noida", image: "/images/location-noida.jpg" },
+  { name: "Greater Noida", image: "/images/location-greater-noida.jpg" },
+  { name: "Ghaziabad", image: "/images/location-ghaziabad.jpg" },
 ];
 
 export default function Areas() {
