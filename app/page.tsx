@@ -14,6 +14,7 @@ import Reviews from '@/components/Reviews';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import GoogleMap from "@/components/GoogleMap";
 
 export default function Home() {
   const [showServiceDetails, setShowServiceDetails] = useState(false);
@@ -32,7 +33,11 @@ export default function Home() {
       <Reviews />
       <FAQ />
       <Contact />
-      <Footer />
+      <ServiceAreas />
+
+<GoogleMap />
+
+<Footer />
     </div>
   );
 }
