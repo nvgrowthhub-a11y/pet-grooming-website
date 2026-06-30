@@ -15,6 +15,7 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import GoogleMap from "@/components/GoogleMap";
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export default function Home() {
   const [showServiceDetails, setShowServiceDetails] = useState(false);
@@ -66,6 +67,7 @@ export default function Home() {
       <Reviews />
       <FAQ />
       <Contact />
+      <FloatingWhatsApp />
       <GoogleMap />
       <Footer />
 
