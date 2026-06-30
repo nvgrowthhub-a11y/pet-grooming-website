@@ -158,11 +158,13 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-white rounded-lg max-w-6xl w-full my-8 max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+      
+      {/* MODAL BOX */}
+      <div className="bg-white rounded-lg max-w-6xl w-full my-8 max-h-[90vh] overflow-y-auto relative">
 
         {/* HEADER */}
-        <div className="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
+        <div className="sticky top-0 bg-white border-b p-6 flex justify-between items-center z-10">
           <h2 className="text-3xl font-bold text-gray-800">Our Services</h2>
 
           <button
@@ -224,11 +226,16 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
                     ))}
                   </ul>
 
-                  {/* BOOK BUTTON (FIXED + SAFE) */}
+                  {/* BOOK BUTTON (DEBUG SAFE) */}
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+
+                      console.log("🔥 BUTTON CLICKED", pkg);
+
                       if (!onBook) {
-                        console.log('onBook is missing ❌');
+                        console.log("❌ onBook prop missing in parent");
                         return;
                       }
 
