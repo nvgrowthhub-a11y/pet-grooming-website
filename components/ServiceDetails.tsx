@@ -1,95 +1,170 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
+
 interface ServiceDetailsProps {
   onClose: () => void;
   onBook?: (pkg: any) => void;
 }
-const servicePackages = {
-  dog: [
-    {
-      name: 'BASIC',
-      price: '₹999',
-      description: 'Simple wash & dry',
-      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Perfume']
-  
-    },
-    {
-      name: 'ESSENTIAL',
-      price: '₹1499',
-      description: 'Complete grooming',
-      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Full Body Trimming' , 'Perfume']
-
-    },
-    {
-      name: 'HAIRCUT',
-      price: '₹1199',
-      description: 'Style & groom',
-      features: ['Full Body Trimming', 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning']
-  
-    },
-    {
-      name: 'ADVANCE',
-      price: '₹1999',
-      description: 'Premium spa package',
-      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' ,'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Under Paw Trim' , 'Sanitary Trim' , 'Face Haircut' , 'Full Body Trim' , 'Oil Massage' , 'Perfume' , 'Anti-Tick Bath']
-    },
-  ],
-  cat: [
-    {
-      name: 'BASIC',
-      price: '₹999',
-      description: 'Simple wash & dry',
-      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Perfume']
-    },
-    {
-      name: 'ESSENTIAL',
-      price: '₹1099',
-      description: 'Complete grooming',
-      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Full Body Trimming' , 'Perfume']
-    },
-    {
-      name: 'HAIRCUT',
-      price: '₹1399',
-      description: 'Style & groom',
-      features: ['Full Body Trimming', 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning']
-    },
-    {
-      name: 'ADVANCE',
-      price: '₹1999',
-      description: 'Premium spa package',
-      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' ,'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Under Paw Trim' , 'Sanitary Trim' , 'Face Haircut' , 'Full Body Trim' , 'Oil Massage' , 'Perfume' , 'Anti-Tick Bath']
-    },
-  ]
-};
 
 export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps) {
   const [petType, setPetType] = useState<'dog' | 'cat'>('dog');
-  const [scrollPosition, setScrollPosition] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const servicePackages = {
+    dog: [
+      {
+        name: 'BASIC',
+        price: '₹999',
+        description: 'Simple wash & dry',
+        features: [
+          'Shampoo',
+          'Conditioning',
+          'Drying',
+          'Combing/Brushing',
+          'Teeth Brushing/ Mouth Spray',
+          'Nail Clipping',
+          'Ear Cleaning',
+          'Eyes Cleaning',
+          'Perfume'
+        ]
+      },
+      {
+        name: 'ESSENTIAL',
+        price: '₹1499',
+        description: 'Complete grooming',
+        features: [
+          'Shampoo',
+          'Conditioning',
+          'Drying',
+          'Combing/Brushing',
+          'Teeth Brushing/ Mouth Spray',
+          'Paw Massage',
+          'Nail Clipping',
+          'Ear Cleaning',
+          'Eyes Cleaning',
+          'Full Body Trimming',
+          'Perfume'
+        ]
+      },
+      {
+        name: 'HAIRCUT',
+        price: '₹1199',
+        description: 'Style & groom',
+        features: ['Full Body Trimming', 'Nail Clipping', 'Ear Cleaning', 'Eyes Cleaning']
+      },
+      {
+        name: 'ADVANCE',
+        price: '₹1999',
+        description: 'Premium spa package',
+        features: [
+          'Shampoo',
+          'Conditioning',
+          'Drying',
+          'Combing/Brushing',
+          'Teeth Brushing/ Mouth Spray',
+          'Paw Massage',
+          'Nail Clipping',
+          'Ear Cleaning',
+          'Eyes Cleaning',
+          'Under Paw Trim',
+          'Sanitary Trim',
+          'Face Haircut',
+          'Full Body Trim',
+          'Oil Massage',
+          'Perfume',
+          'Anti-Tick Bath'
+        ]
+      }
+    ],
+    cat: [
+      {
+        name: 'BASIC',
+        price: '₹999',
+        description: 'Simple wash & dry',
+        features: [
+          'Shampoo',
+          'Conditioning',
+          'Drying',
+          'Combing/Brushing',
+          'Teeth Brushing/ Mouth Spray',
+          'Nail Clipping',
+          'Ear Cleaning',
+          'Eyes Cleaning',
+          'Perfume'
+        ]
+      },
+      {
+        name: 'ESSENTIAL',
+        price: '₹1099',
+        description: 'Complete grooming',
+        features: [
+          'Shampoo',
+          'Conditioning',
+          'Drying',
+          'Combing/Brushing',
+          'Teeth Brushing/ Mouth Spray',
+          'Paw Massage',
+          'Nail Clipping',
+          'Ear Cleaning',
+          'Eyes Cleaning',
+          'Full Body Trimming',
+          'Perfume'
+        ]
+      },
+      {
+        name: 'HAIRCUT',
+        price: '₹1399',
+        description: 'Style & groom',
+        features: ['Full Body Trimming', 'Nail Clipping', 'Ear Cleaning', 'Eyes Cleaning']
+      },
+      {
+        name: 'ADVANCE',
+        price: '₹1999',
+        description: 'Premium spa package',
+        features: [
+          'Shampoo',
+          'Conditioning',
+          'Drying',
+          'Combing/Brushing',
+          'Teeth Brushing/ Mouth Spray',
+          'Paw Massage',
+          'Nail Clipping',
+          'Ear Cleaning',
+          'Eyes Cleaning',
+          'Under Paw Trim',
+          'Sanitary Trim',
+          'Face Haircut',
+          'Full Body Trim',
+          'Oil Massage',
+          'Perfume',
+          'Anti-Tick Bath'
+        ]
+      }
+    ]
+  };
 
   const packages = servicePackages[petType];
 
   const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 300;
-      const newPosition = direction === 'left' 
-        ? scrollPosition - scrollAmount 
-        : scrollPosition + scrollAmount;
-      
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-      setScrollPosition(newPosition);
-    }
+    if (!scrollContainerRef.current) return;
+
+    const scrollAmount = 300;
+
+    scrollContainerRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
   };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 overflow-y-auto">
       <div className="bg-white rounded-lg max-w-6xl w-full my-8 max-h-[90vh] overflow-y-auto">
+
+        {/* HEADER */}
         <div className="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
           <h2 className="text-3xl font-bold text-gray-800">Our Services</h2>
+
           <button
             onClick={onClose}
             className="text-2xl text-gray-600 hover:text-gray-800"
@@ -99,6 +174,8 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
         </div>
 
         <div className="p-8">
+
+          {/* PET SWITCH */}
           <div className="flex gap-4 mb-8 justify-center">
             <button
               onClick={() => setPetType('dog')}
@@ -110,6 +187,7 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
             >
               🐕 Dog Grooming
             </button>
+
             <button
               onClick={() => setPetType('cat')}
               className={`px-8 py-3 rounded-full font-semibold text-lg transition ${
@@ -122,11 +200,12 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
             </button>
           </div>
 
+          {/* PACKAGES */}
           <div className="relative">
+
             <div
               ref={scrollContainerRef}
-              className="flex gap-6 overflow-x-auto scroll-smooth pb-4"
-              style={{ scrollBehavior: 'smooth' }}
+              className="flex gap-6 overflow-x-auto pb-4 scroll-smooth"
             >
               {packages.map((pkg, idx) => (
                 <div
@@ -136,6 +215,7 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
                   <p className="text-pink-600 text-2xl font-bold mb-2">{pkg.price}</p>
                   <p className="text-gray-700 mb-4">{pkg.description}</p>
+
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature, fidx) => (
                       <li key={fidx} className="text-gray-700 flex items-center gap-2">
@@ -143,28 +223,41 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
                       </li>
                     ))}
                   </ul>
-                 <button
-                       onClick={() => onBook?.(pkg)}
-                       className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold"
-                       >
-                         Book Now
-                         </button>
+
+                  {/* BOOK BUTTON (FIXED + SAFE) */}
+                  <button
+                    onClick={() => {
+                      if (!onBook) {
+                        console.log('onBook is missing ❌');
+                        return;
+                      }
+
+                      onBook(pkg);
+                    }}
+                    className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold"
+                  >
+                    Book Now
+                  </button>
+
                 </div>
               ))}
             </div>
 
+            {/* SCROLL BUTTONS */}
             <button
               onClick={() => scroll('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700 transition shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700"
             >
               ←
             </button>
+
             <button
               onClick={() => scroll('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700 transition shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700"
             >
               →
             </button>
+
           </div>
         </div>
       </div>
