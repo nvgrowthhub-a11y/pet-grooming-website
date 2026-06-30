@@ -19,21 +19,47 @@ import GoogleMap from "@/components/GoogleMap";
 export default function Home() {
   const [showServiceDetails, setShowServiceDetails] = useState(false);
 
+  // 🔥 DEBUG: confirm state changes
+  const openModal = () => {
+    console.log("MODAL OPENED");
+    setShowServiceDetails(true);
+  };
+
+  const closeModal = () => {
+    console.log("MODAL CLOSED");
+    setShowServiceDetails(false);
+  };
+
+  const handleBook = (pkg: any) => {
+    console.log("🔥 BOOK BUTTON CLICKED:", pkg);
+
+    // OPTIONAL: WhatsApp test
+    // window.open(
+    //   `https://wa.me/91XXXXXXXXXX?text=I want ${pkg.name} (${pkg.price})`,
+    //   "_blank"
+    // );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-50">
+
       <Navbar />
+
       <Hero />
       <About />
       <BeforeAfter />
-      <Services onServicesClick={() => setShowServiceDetails(true)} />
+
+      {/* ✅ FIXED SERVICES TRIGGER */}
+      <Services onServicesClick={openModal} />
+
+      {/* ✅ MODAL */}
       {showServiceDetails && (
-  <ServiceDetails
-    onClose={() => setShowServiceDetails(false)}
-    onBook={(pkg) => {
-      console.log(pkg);
-    }}
-  />
-)}
+        <ServiceDetails
+          onClose={closeModal}
+          onBook={handleBook}
+        />
+      )}
+
       <Areas />
       <WhyChooseUs />
       <Stats />
@@ -42,6 +68,7 @@ export default function Home() {
       <Contact />
       <GoogleMap />
       <Footer />
+
     </div>
   );
 }
