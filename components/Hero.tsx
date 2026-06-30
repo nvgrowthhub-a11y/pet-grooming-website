@@ -1,43 +1,76 @@
 'use client';
 
+import Image from "next/image";
+
 export default function Hero() {
   const handleBookAppointments = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   const handleBookServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById("services")?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
-    <section id="home" className="bg-gradient-to-r from-pink-200 via-pink-100 to-purple-100 py-20 px-4">
+    <section
+      id="home"
+      className="bg-gradient-to-r from-pink-200 via-pink-100 to-purple-100 pt-28 pb-24 px-4 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
-          Luxury Grooming For Your Beloved Pets
+
+        {/* Curved Logo */}
+        <div className="relative flex justify-center mb-8">
+
+          {/* Curved Ring */}
+          <div className="absolute -top-12 w-72 h-72 border-[5px] border-pink-400 rounded-full opacity-25"></div>
+
+          {/* Logo */}
+          <div className="relative z-10 bg-white p-5 rounded-full shadow-2xl">
+            <Image
+              src="/images/toes-n-tails-logo.png"
+              alt="Toes N Tails"
+              width={180}
+              height={180}
+              priority
+              className="w-40 h-40 object-contain"
+            />
+          </div>
+
+        </div>
+
+        <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
+          Luxury Grooming For
+          <br />
+          Your Beloved Pets
         </h1>
-        <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-          Professional Pet Spa, Grooming & Care Experience. Where your furry companions receive the royal treatment they deserve.
+
+        <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10">
+          Professional Pet Spa, Grooming & Care Experience.
+          Where your furry companions receive the royal treatment they deserve.
         </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <button 
+
+        <div className="flex justify-center gap-5 flex-wrap">
+
+          <button
             onClick={handleBookAppointments}
-            className="bg-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition text-lg"
+            className="bg-pink-600 hover:bg-pink-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl transition duration-300 hover:scale-105"
           >
             Book Appointments
           </button>
-          <button 
+
+          <button
             onClick={handleBookServices}
-            className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-pink-50 transition text-lg"
+            className="border-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white px-10 py-4 rounded-full text-lg font-semibold transition duration-300"
           >
             Book Services
           </button>
+
         </div>
+
       </div>
     </section>
   );
