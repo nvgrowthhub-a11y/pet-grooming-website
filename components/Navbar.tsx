@@ -12,11 +12,11 @@ export default function Navbar() {
             <Image
               src="/images/toes-n-tails-logo.png"
               alt="TOES N TAILS Logo"
-              width={40}
-              height={40}
+              width={45}
+              height={45}
               className="h-10 w-10"
             />
-            <span className="text-xl font-bold text-pink-600">TOES N TAILS</span>
+            
           </div>
           <div className="flex gap-8 items-center">
             <Link href="#home" className="text-gray-700 hover:text-pink-600 transition">Home</Link>
