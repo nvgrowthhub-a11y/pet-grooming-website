@@ -12,8 +12,8 @@ export default function Navbar() {
             <Image
               src="/images/toes-n-tails-logo.png"
               alt="TOES N TAILS Logo"
-              width={45}
-              height={45}
+              width={80}
+              height={80}
               className="h-10 w-10"
             />
             
