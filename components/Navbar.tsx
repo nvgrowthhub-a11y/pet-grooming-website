@@ -37,14 +37,17 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
 
-          {/* LOGO */}
-          <Link
-            href="#home"
-            className="text-xl font-bold flex gap-1"
-          >
-            <span className="text-black">Brand</span>
-            <span className="text-blue-600">Name</span>
-          </Link>
+          {/* LOGO IMAGE VERSION */}
+<Link href="#home" className="flex items-center gap-2">
+  <Image
+    src="/logo.png"
+    alt="Logo"
+    width={80}
+    height={80}
+    className="object-contain"
+  />
+  </span>
+</Link>
 
           {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
