@@ -42,10 +42,12 @@ export default function Navbar() {
   <Image
     src="/logo.png"
     alt="Logo"
-    width={80}
-    height={80}
+    width={40}
+    height={40}
     className="object-contain"
   />
+  <span className="text-xl font-bold">
+    Brand <span className="text-blue-600">Name</span>
   </span>
 </Link>
 
