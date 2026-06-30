@@ -10,29 +10,26 @@ const servicePackages = {
       description: 'Simple wash & dry',
       features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Perfume']
     },
-    {
-      name: 'BASIC HYGIENE',
-      price: '₹799',
-      description: 'Bath with nail trim',
-      features: ['Bath', 'Nail trim', 'Dry', 'Ear cleaning']
     },
     {
       name: 'ESSENTIAL',
-      price: '₹1299',
+      price: '₹1499',
       description: 'Complete grooming',
-      features: ['Bath', 'Haircut', 'Nail trim', 'Teeth cleaning']
+      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Full Body Trimming' , 'Perfume']
+    },
     },
     {
       name: 'HAIRCUT',
-      price: '₹1599',
+      price: '₹1199',
       description: 'Style & groom',
-      features: ['Bath', 'Custom haircut', 'Styling', 'Nail trim']
+      features: ['Full Body Trimming', 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning']
+    },
     },
     {
       name: 'ADVANCE',
-      price: '₹2499',
+      price: '₹1999',
       description: 'Premium spa package',
-      features: ['Bath', 'Massage', 'Full groom', 'Premium products']
+      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' ,'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Under Paw Trim' , 'Sanitary Trim' , 'Face Haircut' , 'Full Body Trim' , 'Oil Massage' , 'Perfume' , 'Anti-Tick Bath']
     },
   ],
   cat: [
