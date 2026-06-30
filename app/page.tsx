@@ -32,15 +32,20 @@ export default function Home() {
   };
 
   const handleBook = (pkg: any) => {
-    console.log("🔥 BOOK BUTTON CLICKED:", pkg);
+  const message = `Hi Toes N Tails! 👋
 
-    // OPTIONAL: WhatsApp test
-    // window.open(
-    //   `https://wa.me/91XXXXXXXXXX?text=I want ${pkg.name} (${pkg.price})`,
-    //   "_blank"
-    // );
-  };
+I want to book a grooming appointment.
 
+Package: ${pkg.name}
+Price: ${pkg.price}
+
+Please share the available slots.`;
+
+  window.open(
+    `https://wa.me/918800971337?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+};
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-50">
 
