@@ -226,15 +226,19 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
                     ))}
                   </ul>
 
-                  {/* BOOK BUTTON (DEBUG SAFE) */}
-                  <button
+                 {/* BOOK BUTTON */}
+<button
   type="button"
   onClick={() => onBook?.(pkg)}
   className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold"
 >
   Book Now
 </button>
-            {/* SCROLL BUTTONS */}
+
+</div>   {/* Package Card */}
+))}       {/* packages.map */}
+</div>    {/* Scroll Container */}
+          
             <button
               onClick={() => scroll('left')}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700"
