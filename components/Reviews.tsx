@@ -2,30 +2,30 @@
 
 const reviews = [
   {
-    name: 'Rajesh Kumar',
+    name: 'Deepa Jha',
     location: 'South Delhi',
-    text: 'बिल्कुल शानदार सेवा! मेरे कुत्ते को यहाँ इतनी प्रेमपूर्ण देखभाल मिली कि वह अब बार-बार जाना चाहता है।',
+    text: 'Amazing at-home grooming experience with Prashant bhaiya. He was extremely polite and gentle, and most importantly, clearly knew what he was doing. His knowledge and comfort with dogs really showed throughout the session. I would strongly recommend him to anyone looking for a gentle, hassle-free, at-home grooming experience for their fur babies.',
     rating: 5,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5%20%20-KgQlhZPxkB6Jfg4JCjtVa13qHQYF55.jpeg'
   },
   {
-    name: 'Priya Singh',
+    name: 'Meera Choudhary',
     location: 'Gurgaon',
-    text: 'ग्रूमिंग के बाद मेरे पालतू जानवर की त्वचा बिल्कुल स्वस्थ हो गई। टीम बहुत पेशेवर है।',
+    text: 'I wanted to thank your team Toes N Tails for the excellent grooming service. The attention to detail, cleanliness, and care shown toward my pet was outstanding. It’s clear you genuinely love animals.',
     rating: 5,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2%20%20-Ab2n7cnLuszI18u4XXCeRCnJ7jbCUE.jpeg'
   },
   {
-    name: 'Amit Verma',
+    name: 'Akansha Tuteja ',
     location: 'Noida',
-    text: 'घर पर ही इतनी बेहतरीन सुविधा मिलेगी यह मुझे पता नहीं था। कीमत भी उचित है।',
+    text: 'One of the best dog groomers in Ghaziabad. Prashant has a lot of experience in dog grooming, and it clearly shows. I booked his services last week, and I don’t think I’ve ever had a better experience. He was very patient and calm throughout the session, and handled my dog with great care. I’m very happy with the service and will definitely book him again. Highly recommended for all pet parents.',
     rating: 5,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5%20%20-KgQlhZPxkB6Jfg4JCjtVa13qHQYF55.jpeg'
   },
   {
-    name: 'नीता गुप्ता',
+    name: 'Samir Sudan',
     location: 'Faridabad',
-    text: 'मेरी बिल्ली बहुत डरपोक है लेकिन इन लोगों की नरम व्यवहार ने उसे शांत रखा। सब कुछ परफेक्ट!',
+    text: 'Very good experience of our Pamerian dogs grooming by Prashant Pet Grooming. Very much satisfied. Best Pet Groomer at Rajnagar Extension, Ghaziabad.',
     rating: 5,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2%20%20-Ab2n7cnLuszI18u4XXCeRCnJ7jbCUE.jpeg'
   },
