@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from "next/image";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -124,36 +125,48 @@ Message: ${formData.message}`;
 
               <div>
                 <h4 className="text-lg font-semibold text-gray-800 mb-4">Connect With Us</h4>
-                <div className="flex gap-4">
+               <div className="flex gap-4">
 
   <a
     href="https://wa.me/918800971337"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition-all duration-300"
-    title="WhatsApp"
+    className="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition"
   >
-    <FaWhatsapp />
+    <Image
+      src="/images/whatsapp.png"
+      alt="WhatsApp"
+      width={34}
+      height={34}
+    />
   </a>
 
   <a
-    href="https://instagram.com/YOUR_USERNAME"
+    href="https://www.instagram.com/toesntail?igsh=MXhoOXo5cW9rbnd3Mw%3D%3D&utm_source=qr"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition-all duration-300"
-    title="Instagram"
+    className="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition"
   >
-    <FaInstagram />
+    <Image
+      src="/images/instagram.png"
+      alt="Instagram"
+      width={34}
+      height={34}
+    />
   </a>
 
   <a
-    href="https://facebook.com/YOUR_USERNAME"
+    href="https://www.facebook.com/ToesNTail"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-14 h-14 rounded-full bg-[#1877F2] flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition-all duration-300"
-    title="Facebook"
+    className="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition"
   >
-    <FaFacebook />
+    <Image
+      src="/images/facebook.png"
+      alt="Facebook"
+      width={34}
+      height={34}
+    />
   </a>
 
 </div>
