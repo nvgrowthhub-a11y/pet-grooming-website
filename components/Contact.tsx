@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
