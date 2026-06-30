@@ -1,24 +1,11 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import * as fbq from '@/lib/fpixel';
 
 export default function FacebookPixel() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    fbq.pageview();
-  }, [pathname, searchParams]);
-
   return (
     <>
-      <Script
-        id="facebook-pixel"
-        strategy="afterInteractive"
-      >
+      <Script id="facebook-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -33,23 +20,13 @@ export default function FacebookPixel() {
           t.src=v;
           s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s);
-        }(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+          }(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '${fbq.FB_PIXEL}');
-        fbq('track', 'PageView');
+          fbq('init', '1510407937497465');
+          fbq('track', 'PageView');
         `}
       </Script>
-
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src={`https://www.facebook.com/tr?id=${fbq.FB_PIXEL}&ev=PageView&noscript=1`}
-          alt=""
-        />
-      </noscript>
     </>
   );
 }
