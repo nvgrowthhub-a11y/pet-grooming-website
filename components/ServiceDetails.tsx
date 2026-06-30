@@ -6,9 +6,9 @@ const servicePackages = {
   dog: [
     {
       name: 'BASIC',
-      price: '₹499',
+      price: '₹999',
       description: 'Simple wash & dry',
-      features: ['Bath', 'Dry', 'Basic trim']
+      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Perfume']
     },
     {
       name: 'BASIC HYGIENE',
