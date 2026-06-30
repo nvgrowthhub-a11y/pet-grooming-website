@@ -43,10 +43,10 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
-          Luxury Grooming For
-          <br />
-          Your Beloved Pets
-        </h1>
+  Welcome to
+  <br />
+  <span className="text-pink-600">Toes N Tails</span>
+</h1>
 
         <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10">
           Professional Pet Spa, Grooming & Care Experience.
