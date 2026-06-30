@@ -61,7 +61,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <p className="text-gray-400 mb-4">
-              G-007, Raj Nagar Extension,<br/>
+              G-007, Ajnara Integrity Office ,Raj Nagar Extension,<br/>
               Ghaziabad, Uttar Pradesh 201003
             </p>
             <p className="text-gray-400 font-semibold">+91 88009 71337</p>
