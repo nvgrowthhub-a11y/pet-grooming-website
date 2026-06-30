@@ -228,28 +228,12 @@ export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps)
 
                   {/* BOOK BUTTON (DEBUG SAFE) */}
                   <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-
-                      console.log("🔥 BUTTON CLICKED", pkg);
-
-                      if (!onBook) {
-                        console.log("❌ onBook prop missing in parent");
-                        return;
-                      }
-
-                      onBook(pkg);
-                    }}
-                    className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold"
-                  >
-                    Book Now
-                  </button>
-
-                </div>
-              ))}
-            </div>
-
+  type="button"
+  onClick={() => onBook?.(pkg)}
+  className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold"
+>
+  Book Now
+</button>
             {/* SCROLL BUTTONS */}
             <button
               onClick={() => scroll('left')}
