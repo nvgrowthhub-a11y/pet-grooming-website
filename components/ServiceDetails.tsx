@@ -1,7 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-
+interface ServiceDetailsProps {
+  onClose: () => void;
+  onBook?: (pkg: any) => void;
+}
 const servicePackages = {
   dog: [
     {
@@ -9,21 +12,21 @@ const servicePackages = {
       price: '₹999',
       description: 'Simple wash & dry',
       features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Perfume']
-    },
+  
     },
     {
       name: 'ESSENTIAL',
       price: '₹1499',
       description: 'Complete grooming',
       features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Full Body Trimming' , 'Perfume']
-    },
+
     },
     {
       name: 'HAIRCUT',
       price: '₹1199',
       description: 'Style & groom',
       features: ['Full Body Trimming', 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning']
-    },
+  
     },
     {
       name: 'ADVANCE',
@@ -35,42 +38,32 @@ const servicePackages = {
   cat: [
     {
       name: 'BASIC',
-      price: '₹399',
+      price: '₹999',
       description: 'Simple wash & dry',
-      features: ['Bath', 'Dry', 'Basic trim']
-    },
-    {
-      name: 'BASIC HYGIENE',
-      price: '₹699',
-      description: 'Bath with nail trim',
-      features: ['Bath', 'Nail trim', 'Dry', 'Ear cleaning']
+      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Perfume']
     },
     {
       name: 'ESSENTIAL',
       price: '₹1099',
       description: 'Complete grooming',
-      features: ['Bath', 'Haircut', 'Nail trim', 'Dental care']
+      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' , 'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Full Body Trimming' , 'Perfume']
     },
     {
       name: 'HAIRCUT',
       price: '₹1399',
       description: 'Style & groom',
-      features: ['Bath', 'Lion cut', 'Styling', 'Nail trim']
+      features: ['Full Body Trimming', 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning']
     },
     {
       name: 'ADVANCE',
       price: '₹1999',
       description: 'Premium spa package',
-      features: ['Bath', 'Massage', 'Full groom', 'Premium products']
+      features: ['Shampoo', 'Conditioning', 'Drying', 'Comibing/Brushing' , 'Teeth Brushing/ Mouth Spray' ,'Paw Massage' , 'Nail Clipping' , 'Ear Cleaning' , 'Eyes Cleaning' , 'Under Paw Trim' , 'Sanitary Trim' , 'Face Haircut' , 'Full Body Trim' , 'Oil Massage' , 'Perfume' , 'Anti-Tick Bath']
     },
   ]
 };
 
-interface ServiceDetailsProps {
-  onClose: () => void;
-}
-
-export default function ServiceDetails({ onClose }: ServiceDetailsProps) {
+export default function ServiceDetails({ onClose, onBook }: ServiceDetailsProps) {
   const [petType, setPetType] = useState<'dog' | 'cat'>('dog');
   const [scrollPosition, setScrollPosition] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -150,9 +143,12 @@ export default function ServiceDetails({ onClose }: ServiceDetailsProps) {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold">
-                    Book Now
-                  </button>
+                 <button
+                       onClick={() => onBook?.(pkg)}
+                       className="w-full bg-pink-600 text-white py-2 rounded-full hover:bg-pink-700 transition font-semibold"
+                       >
+                         Book Now
+                         </button>
                 </div>
               ))}
             </div>
