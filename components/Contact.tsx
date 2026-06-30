@@ -136,8 +136,8 @@ Message: ${formData.message}`;
     <Image
       src="/images/whatsapp.png"
       alt="WhatsApp"
-      width={34}
-      height={34}
+      width={50}
+      height={50}
     />
   </a>
 
