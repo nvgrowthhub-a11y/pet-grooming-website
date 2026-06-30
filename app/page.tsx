@@ -26,7 +26,14 @@ export default function Home() {
       <About />
       <BeforeAfter />
       <Services onServicesClick={() => setShowServiceDetails(true)} />
-      {showServiceDetails && <ServiceDetails onClose={() => setShowServiceDetails(false)} />}
+      {showServiceDetails && (
+  <ServiceDetails
+    onClose={() => setShowServiceDetails(false)}
+    onBook={(pkg) => {
+      console.log(pkg);
+    }}
+  />
+)}
       <Areas />
       <WhyChooseUs />
       <Stats />
